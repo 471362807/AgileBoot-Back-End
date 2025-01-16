@@ -93,6 +93,7 @@ public class LoginController {
     @Operation(summary = "登录")
     @PostMapping("/login")
     public ResponseDTO<TokenDTO> login(@RequestBody LoginCommand loginCommand) {
+        System.out.println("登录啊啊啊啊啊啊~~~~~~");
         // 生成令牌
         String token = loginService.login(loginCommand);
         SystemLoginUser loginUser = AuthenticationUtils.getSystemLoginUser();
